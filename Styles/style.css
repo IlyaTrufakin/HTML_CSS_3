@@ -1,1 +1,103 @@
+body {
+  margin: auto;
+  width: 80%;
+}
 
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 10px;
+  overflow: hidden;
+  letter-spacing: 1px;
+}
+
+table th {
+  background: #37516b;
+  color: #ffffff;
+  text-align: left;
+  padding: 7px;
+  font-weight: bold;
+}
+
+table td {
+  background: #b0c4df;
+  color: #344960;
+  text-align: left;
+  border-top: 1px solid #37516b;
+  padding: 4px 4px 4px 7px;
+}
+
+.mainBlock {
+  display: flex;
+  background-color: #f5f5f5;
+  padding: 15px;
+}
+
+.textBlock {
+  padding: 5px;
+}
+
+.cards_Block {
+  display: flex;
+  padding: 5px;
+}
+
+.text {
+  margin: 10px;
+  text-align: justify;
+}
+.card {
+  margin: 10px;
+}
+
+@media screen and (max-width: 599px) {
+  .mainBlock {
+    flex-direction: column;
+  }
+  .textBlock {
+    width: 100%;
+  }
+  .cards_Block {
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+  }
+  .card {
+    width: auto;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 800px) {
+  .mainBlock {
+    flex-direction: column;
+  }
+  .textBlock {
+    width: 100%;
+  }
+  .cards_Block {
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+  }
+  .card {
+    flex-grow: 1;
+  }
+}
+
+@media screen and (min-width: 801px) {
+  .mainBlock {
+    flex-direction: row;
+  }
+  .textBlock {
+    width: auto;
+  }
+  .cards_Block {
+    flex-direction: column;
+    justify-content: flex-start;
+    min-width: 250px;
+    flex-grow: 0;
+  }
+  .card {
+    width: auto;
+  }
+}
